@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Unorthodox Tech Blog</title>
+    <link>https://berylleta.dev/posts/</link>
+    <description>Recent content in Posts on Unorthodox Tech Blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://berylleta.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
