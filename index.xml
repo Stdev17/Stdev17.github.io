@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Unorthodox Tech Blog</title>
-    <link>http://localhost:1313/</link>
+    <link>https://blog.berylleta.dev/</link>
     <description>Recent content on Unorthodox Tech Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 May 2024 00:29:52 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 May 2024 00:40:48 +0900</lastBuildDate>
+    <atom:link href="https://blog.berylleta.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://blog.berylleta.dev/about/</link>
+      <pubDate>Wed, 22 May 2024 00:40:48 +0900</pubDate>
+      <guid>https://blog.berylleta.dev/about/</guid>
+      <description> Cloud Native Life&#xA;GitHub: [[Stdev17|https://github.com/Stdev17]] </description>
+    </item>
     <item>
       <title>가상 CS 인터뷰를 위한 프롬프트</title>
-      <link>http://localhost:1313/posts/cs-interview-prompt/</link>
+      <link>https://blog.berylleta.dev/posts/cs-interview-prompt/</link>
       <pubDate>Wed, 22 May 2024 00:29:52 +0900</pubDate>
-      <guid>http://localhost:1313/posts/cs-interview-prompt/</guid>
+      <guid>https://blog.berylleta.dev/posts/cs-interview-prompt/</guid>
       <description>오랫만에 기술 인터뷰을 보니 내 CS에 대한 이해도가 처참함을 새삼 느꼈다. 사실 CS란 것이 그런 것이다. 그래도 학교 수업을 듣고 과제를 했으니 어느 정도는 이해하고 있겠지 싶어도, 정작 매우 간단한 퀴즈 수준의 질문을 받아도 완벽하게 대답해내지 못한다. 단순히 텍스트북의 CS 내용을 암기하는 것을 넘어서 그 프로토콜이 어떻게 디자인되었는지에 대한 다층적인 고민이 필요하다.&#xA;불행히도 다행히도(?) 우리는 AI hype의 시대에 살고 있다. 이 인터뷰를 아주 작은 fee로 대신해 줄 agent가 존재한다. 만약 현업 개발자를 고용한다면 시간당 3~5만원 이상을 받겠지만, ChatGPT Plus를 구독하거나 시간당 1달러 이하의 API 사용료로 진행해도 퀄리티엔 사실상 차이가 없다.</description>
     </item>
   </channel>

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Unorthodox Tech Blog</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://blog.berylleta.dev/tags/</link>
     <description>Recent content in Tags on Unorthodox Tech Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 May 2024 00:29:52 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.berylleta.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Career</title>
-      <link>http://localhost:1313/tags/career/</link>
+      <link>https://blog.berylleta.dev/tags/career/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/career/</guid>
+      <guid>https://blog.berylleta.dev/tags/career/</guid>
       <description></description>
     </item>
     <item>
       <title>Computer-Science</title>
-      <link>http://localhost:1313/tags/computer-science/</link>
+      <link>https://blog.berylleta.dev/tags/computer-science/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/computer-science/</guid>
+      <guid>https://blog.berylleta.dev/tags/computer-science/</guid>
       <description></description>
     </item>
     <item>
       <title>Gen-Ai</title>
-      <link>http://localhost:1313/tags/gen-ai/</link>
+      <link>https://blog.berylleta.dev/tags/gen-ai/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/gen-ai/</guid>
+      <guid>https://blog.berylleta.dev/tags/gen-ai/</guid>
       <description></description>
     </item>
   </channel>

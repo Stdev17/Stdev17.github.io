@@ -2,27 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/career/</loc>
+    <loc>https://blog.berylleta.dev/about/</loc>
+    <lastmod>2024-05-22T00:40:48+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.berylleta.dev/</loc>
+    <lastmod>2024-05-22T00:40:48+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.berylleta.dev/tags/career/</loc>
     <lastmod>2024-05-22T00:29:52+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/computer-science/</loc>
+    <loc>https://blog.berylleta.dev/tags/computer-science/</loc>
     <lastmod>2024-05-22T00:29:52+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/gen-ai/</loc>
+    <loc>https://blog.berylleta.dev/tags/gen-ai/</loc>
     <lastmod>2024-05-22T00:29:52+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://blog.berylleta.dev/posts/</loc>
     <lastmod>2024-05-22T00:29:52+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://blog.berylleta.dev/tags/</loc>
     <lastmod>2024-05-22T00:29:52+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://blog.berylleta.dev/posts/cs-interview-prompt/</loc>
     <lastmod>2024-05-22T00:29:52+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/cs-interview-prompt/</loc>
-    <lastmod>2024-05-22T00:29:52+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://blog.berylleta.dev/categories/</loc>
   </url>
 </urlset>
