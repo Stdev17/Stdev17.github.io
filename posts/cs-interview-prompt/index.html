@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>가상 CS 인터뷰를 위한 프롬프트 - </title>
+
+  <meta name="description" content="오랫만에 기술 인터뷰을 보니 내 CS에 대한 이해도가 처참함을 새삼 느꼈다. 사실 CS란 것이 그런 것이다. 그래도 학교 수업을 듣고 과제를 했으니 어느 정도는 이해하고 있겠지 싶어도, 정작 매우 간단한 퀴즈 수준의 질문을 받아도 완벽하게 대답해내지 못한다. 단순히 텍스트북의 CS 내용을 암기하는 것을 넘어서 그 프로토콜이 어떻게 디자인되었는지에 대한 다층적인 고민이 필요하다.
+불행히도 다행히도(?) 우리는 AI hype의 시대에 살고 있다. 이 인터뷰를 아주 작은 fee로 대신해 줄 agent가 존재한다. 만약 현업 개발자를 고용한다면 시간당 3~5만원 이상을 받겠지만, ChatGPT Plus를 구독하거나 시간당 1달러 이하의 API 사용료로 진행해도 퀄리티엔 사실상 차이가 없다."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Unorthodox Tech Blog",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/posts\/cs-interview-prompt\/",
+          "name": "가상 cs 인터뷰를 위한 프롬프트"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "가상 CS 인터뷰를 위한 프롬프트",
+  "description" : "오랫만에 기술 인터뷰을 보니 내 CS에 대한 이해도가 처참함을 새삼 느꼈다. 사실 CS란 것이 그런 것이다. 그래도 학교 수업을 듣고 과제를 했으니 어느 정도는 이해하고 있겠지 싶어도, 정작 매우 간단한 퀴즈 수준의 질문을 받아도 완벽하게 대답해내지 못한다. 단순히 텍스트북의 CS 내용을 암기하는 것을 넘어서 그 프로토콜이 어떻게 디자인되었는지에 대한 다층적인 고민이 필요하다.\n불행히도 다행히도(?) 우리는 AI hype의 시대에 살고 있다. 이 인터뷰를 아주 작은 fee로 대신해 줄 agent가 존재한다. 만약 현업 개발자를 고용한다면 시간당 3~5만원 이상을 받겠지만, ChatGPT Plus를 구독하거나 시간당 1달러 이하의 API 사용료로 진행해도 퀄리티엔 사실상 차이가 없다.",
+  "inLanguage" : "en",
+  "wordCount":  3476 ,
+  "datePublished" : "2024-05-22T00:29:52\u002b09:00",
+  "dateModified" : "2024-05-22T00:29:52\u002b09:00",
+  "image" : "http:\/\/localhost:1313\/",
+  "keywords" : [ "career, computer-science, gen-ai" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/posts\/cs-interview-prompt\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+
+<meta property="og:title" content="가상 CS 인터뷰를 위한 프롬프트" />
+<meta property="og:description" content="오랫만에 기술 인터뷰을 보니 내 CS에 대한 이해도가 처참함을 새삼 느꼈다. 사실 CS란 것이 그런 것이다. 그래도 학교 수업을 듣고 과제를 했으니 어느 정도는 이해하고 있겠지 싶어도, 정작 매우 간단한 퀴즈 수준의 질문을 받아도 완벽하게 대답해내지 못한다. 단순히 텍스트북의 CS 내용을 암기하는 것을 넘어서 그 프로토콜이 어떻게 디자인되었는지에 대한 다층적인 고민이 필요하다.
+불행히도 다행히도(?) 우리는 AI hype의 시대에 살고 있다. 이 인터뷰를 아주 작은 fee로 대신해 줄 agent가 존재한다. 만약 현업 개발자를 고용한다면 시간당 3~5만원 이상을 받겠지만, ChatGPT Plus를 구독하거나 시간당 1달러 이하의 API 사용료로 진행해도 퀄리티엔 사실상 차이가 없다.">
+<meta property="og:url" content="http://localhost:1313/posts/cs-interview-prompt/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Unorthodox Tech Blog" />
+
+  <meta name="twitter:title" content="가상 CS 인터뷰를 위한 프롬프트" />
+  <meta name="twitter:description" content="오랫만에 기술 인터뷰을 보니 내 CS에 대한 이해도가 처참함을 새삼 느꼈다. 사실 CS란 것이 그런 것이다. 그래도 학교 수업을 듣고 과제를 했으니 어느 정도는 이해하고 있겠지 싶어도, 정작 매우 간단한 퀴즈 수준의 질문을 받아도 완벽하게 대답해내지 못한다. 단순히 텍스트북의 CS 내용을 암기하는 것을 넘어서 그 프로토콜이 어떻게 디자인되었는지에 대한 다층 …">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="generator" content="Hugo 0.126.1">
+  <link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="Unorthodox Tech Blog"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="http://localhost:1313/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="http://localhost:1313/css/syntax.css" /><link rel="stylesheet" href="http://localhost:1313/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost:1313/">Unorthodox Tech Blog</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="posts-heading">
+              
+                <h1>가상 CS 인터뷰를 위한 프롬프트</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>오랫만에 기술 인터뷰을 보니 내 CS에 대한 이해도가 처참함을 새삼 느꼈다. 사실 CS란 것이 그런 것이다. 그래도 학교 수업을 듣고 과제를 했으니 어느 정도는 이해하고 있겠지 싶어도, 정작 매우 간단한 퀴즈 수준의 질문을 받아도 완벽하게 대답해내지 못한다. 단순히 텍스트북의 CS 내용을 암기하는 것을 넘어서 그 프로토콜이 어떻게 디자인되었는지에 대한 다층적인 고민이 필요하다.</p>
+<p>불행히도 다행히도(?) 우리는 AI hype의 시대에 살고 있다. 이 인터뷰를 아주 작은 fee로 대신해 줄 agent가 존재한다. 만약 현업 개발자를 고용한다면 시간당 3~5만원 이상을 받겠지만, ChatGPT Plus를 구독하거나 시간당 1달러 이하의 API 사용료로 진행해도 퀄리티엔 사실상 차이가 없다.</p>
+<p>아래에는 이를 진행하기 위한 프롬프트를 하나 제시한다. 인터뷰를 마치고 나면 제대로 이해하지 못한 내용을 복습할 수 있는 인터넷 자료도 제공한다. 이 인터뷰를 편안하게 진행할 수 있을 때까지 무한으로 즐겨 보자! 주제 별로 단편적인 학습을 넘어서 통일된 주제로 학습해 보고 싶다면 다음 자료들도 살펴 보자. 물론 몇백 시간이 소요되기 때문에 쉽지는 않을 것이다. 좋은 스터디원을 구해서 진행해 보자.</p>
+<ul>
+<li>쉽게 배우는 자료구조, 쉽게 배우는 알고리즘, Introduction to Algorithms(일명 CLRS)</li>
+<li>Computer Systems: A Programmer&rsquo;s Perspective</li>
+<li>Operating Systems: Three Easy Pieces</li>
+<li>컴퓨터 네트워킹: 하향식 접근 (제8판): <a href="https://github.com/IT-Book-Organization/Computer-Networking_A-Top-Down-Approach/tree/main">https://github.com/IT-Book-Organization/Computer-Networking_A-Top-Down-Approach/tree/main</a></li>
+</ul>
+<h1 id="시작">시작</h1>
+<pre tabindex="0"><code>주니어 데브옵스 인터뷰에서 사용할 수 있는 단순하면서도 근본적인 이해를 다루는 CS 질문을 하나 제안해줘. 후보자가 명확히 답변하지 못할 경우, 혹독하고 날카로운 피드백과 추가 질문을 통해 답변을 유도해야 해.
+
+## 예시 질문
+- TCP와 UDP의 차이점은 무엇입니까? 특히 유저 레벨에서의 본질적인 차이점은 무엇인가요? 각각의 프로토콜을 사용하는 것이 유리한 상황은 무엇인가요?
+- 해시맵 자료구조는 어떻게 동작하나요? 해시맵의 시간복잡도는 무엇이며, 그 이유는 무엇인가요?
+- DNS가 무엇인지 설명해주시겠어요? 그리고 DNS 요청이 수행될 때 어떤 과정이 일어나는지 단계별로 설명해 주세요.
+
+다음과 같은 시나리오 하나를 다른 질문 주제를 들어 제시해 봐.
+
+## 예시 인터뷰 시나리오
+### 기본 질문:
+
+**질문:** 가상 메모리가 무엇인지 설명해주시겠어요? 그리고 가상 메모리에서 페이징과 세그먼테이션의 차이점은 무엇인가요?
+
+### 후보자가 명확히 답변하지 못할 경우의 피드백과 추가 질문:
+
+#### 피드백:
+
+&#34;가상 메모리 개념은 컴퓨터 과학에서 중요한 부분입니다. 쉽게 말해 주기억장치와 보조기억장치를 효율적으로 사용하게끔 하는 중요한 기술입니다. 이 개념부터 더 명확히 이해하고 넘어가죠.&#34;
+
+#### 추가 질문:
+
+**가상 메모리**
+
+- **추가 질문 1:** 가상 메모리의 주요 장점은 무엇인가요? 그리고 이는 시스템 성능에 어떤 영향을 미치나요?
+- **추가 질문 2:** 가상 메모리는 물리적 메모리가 꽉 찼을 때 어떻게 동작하나요?
+
+**페이징**
+
+- **추가 질문 1:** 페이징에서 페이지 테이블이 무엇인가요? 어떻게 동작하나요?
+- **추가 질문 2:** 페이지 교체 알고리즘 중 하나를 설명해주시겠어요? 예를 들어, LRU(Least Recently Used) 알고리즘에 대해 이야기해보세요.
+
+**세그먼테이션**
+
+- **추가 질문 1:** 세그먼테이션에서 세그먼트 테이블의 역할은 무엇인가요?
+- **추가 질문 2:** 외부 단편화와 내부 단편화의 차이점은 무엇인가요? 둘 다 세그먼테이션과 어떻게 관련이 있나요?
+
+### 예시 답변:
+
+**기본 질문 예시 답변:** &#34;가상 메모리는 실제 물리 메모리의 용량보다 더 큰 용량을 사용하는 것처럼 애플리케이션을 동작시키는 메커니즘입니다. 이를 통해 애플리케이션은 더 많은 메모리를 사용할 수 있게 되며, 이는 물리 메모리가 부족한 경우에도 시스템이 원활하게 작동할 수 있게 도와줍니다.
+
+페이징은 가상 메모리를 일정한 크기의 블록(페이지)으로 나누는 방법이고, 세그먼테이션은 논리적인 구획(세그먼트)으로 나누는 방법입니다. 페이징에서는 모든 페이지가 동일한 크기를 가지지만, 세그먼테이션에서는 세그먼트의 크기가 다양할 수 있습니다. 페이징은 주로 외부 단편화를 줄이는 데 효과적이고, 세그먼테이션은 논리적 단위로 메모리를 관리하는 데 유리합니다.&#34;
+
+**후보자가 페이징에 대해 잘 설명하지 못할 경우:** &#34;페이징에서는 페이지 테이블이 어떻게 동작하나요?&#34; &#34;페이지 교체 알고리즘 중 하나인 LRU(Least Recently Used) 알고리즘을 설명해주시겠어요?&#34;
+
+**후보자가 세그먼테이션에 대해 잘 설명하지 못할 경우:** &#34;외부 단편화와 내부 단편화의 차이점은 무엇인가요? 둘 다 세그먼테이션과 어떻게 관련이 있나요?&#34;
+</code></pre><h1 id="진행">진행</h1>
+<pre tabindex="0"><code>그럼 이제 인터뷰를 시작하자. 먼저 주니어 데브옵스 인터뷰를 위한 간단하고 근본적인 CS 주제 7가지를 제시해 줘. 현업 기술보다는 학교 수업에서 배울 만한 컴퓨터 사이언스 주제를 제시해 줘.
+</code></pre><pre tabindex="0"><code>이제 1번째 주제로 맨 처음에 주어진 양식을 기반으로 인터뷰를 진행하자. 우선 나에게 질문 하나를 해 줘. 내가 제대로 질문에 답변하냐 못 하냐에 따라 다르게 응답하면 돼. 내가 추가 질문까지 제대로 답하거나, 피드백에도 기본 질문에 답하지 못하면, 다음 주제로 넘어가면 돼. 7개의 질문을 마치면 인터뷰를 종료해.
+
+추가: 참고로, 빅테크의 신입을 채용한다고 생각하고 좀 더 깐깐한 기준을 적용해 줘.
+</code></pre><pre tabindex="0"><code>방금 내가 진행한 인터뷰에서 제대로 이해하지 못한 주제들을 복습할 수 있는 자료를 인터넷에서 찾아서 몇 개 제공해 줘. 혹은 책을 추천해 주어도 좋아.
+</code></pre><h1 id="예시">예시</h1>
+<p>User</p>
+<p>주니어 데브옵스 인터뷰에서 사용할 수 있는 단순하면서도 근본적인 이해를 다루는 CS 질문을 하나 제안해줘. 후보자가 명확히 답변하지 못할 경우, 혹독하고 날카로운 피드백과 추가 질문을 통해 답변을 유도해야 해.</p>
+<h2 id="예시-질문">예시 질문</h2>
+<ul>
+<li>TCP와 UDP의 차이점은 무엇입니까? 특히 유저 레벨에서의 본질적인 차이점은 무엇인가요? 각각의 프로토콜을 사용하는 것이 유리한 상황은 무엇인가요?</li>
+<li>해시맵 자료구조는 어떻게 동작하나요? 해시맵의 시간복잡도는 무엇이며, 그 이유는 무엇인가요?</li>
+<li>DNS가 무엇인지 설명해주시겠어요? 그리고 DNS 요청이 수행될 때 어떤 과정이 일어나는지 단계별로 설명해 주세요.</li>
+</ul>
+<p>다음과 같은 시나리오 하나를 다른 질문 주제를 들어 제시해 봐.</p>
+<h2 id="예시-인터뷰-시나리오">예시 인터뷰 시나리오</h2>
+<h3 id="기본-질문">기본 질문:</h3>
+<p><strong>질문:</strong> 가상 메모리가 무엇인지 설명해주시겠어요? 그리고 가상 메모리에서 페이징과 세그먼테이션의 차이점은 무엇인가요?</p>
+<h3 id="후보자가-명확히-답변하지-못할-경우의-피드백과-추가-질문">후보자가 명확히 답변하지 못할 경우의 피드백과 추가 질문:</h3>
+<h4 id="피드백">피드백:</h4>
+<p>&ldquo;가상 메모리 개념은 컴퓨터 과학에서 중요한 부분입니다. 쉽게 말해 주기억장치와 보조기억장치를 효율적으로 사용하게끔 하는 중요한 기술입니다. 이 개념부터 더 명확히 이해하고 넘어가죠.&rdquo;</p>
+<h4 id="추가-질문">추가 질문:</h4>
+<p><strong>가상 메모리</strong></p>
+<ul>
+<li><strong>추가 질문 1:</strong> 가상 메모리의 주요 장점은 무엇인가요? 그리고 이는 시스템 성능에 어떤 영향을 미치나요?</li>
+<li><strong>추가 질문 2:</strong> 가상 메모리는 물리적 메모리가 꽉 찼을 때 어떻게 동작하나요?</li>
+</ul>
+<p><strong>페이징</strong></p>
+<ul>
+<li><strong>추가 질문 1:</strong> 페이징에서 페이지 테이블이 무엇인가요? 어떻게 동작하나요?</li>
+<li><strong>추가 질문 2:</strong> 페이지 교체 알고리즘 중 하나를 설명해주시겠어요? 예를 들어, LRU(Least Recently Used) 알고리즘에 대해 이야기해보세요.</li>
+</ul>
+<p><strong>세그먼테이션</strong></p>
+<ul>
+<li><strong>추가 질문 1:</strong> 세그먼테이션에서 세그먼트 테이블의 역할은 무엇인가요?</li>
+<li><strong>추가 질문 2:</strong> 외부 단편화와 내부 단편화의 차이점은 무엇인가요? 둘 다 세그먼테이션과 어떻게 관련이 있나요?</li>
+</ul>
+<h3 id="예시-답변">예시 답변:</h3>
+<p><strong>기본 질문 예시 답변:</strong> &ldquo;가상 메모리는 실제 물리 메모리의 용량보다 더 큰 용량을 사용하는 것처럼 애플리케이션을 동작시키는 메커니즘입니다. 이를 통해 애플리케이션은 더 많은 메모리를 사용할 수 있게 되며, 이는 물리 메모리가 부족한 경우에도 시스템이 원활하게 작동할 수 있게 도와줍니다.</p>
+<p>페이징은 가상 메모리를 일정한 크기의 블록(페이지)으로 나누는 방법이고, 세그먼테이션은 논리적인 구획(세그먼트)으로 나누는 방법입니다. 페이징에서는 모든 페이지가 동일한 크기를 가지지만, 세그먼테이션에서는 세그먼트의 크기가 다양할 수 있습니다. 페이징은 주로 외부 단편화를 줄이는 데 효과적이고, 세그먼테이션은 논리적 단위로 메모리를 관리하는 데 유리합니다.&rdquo;</p>
+<p><strong>후보자가 페이징에 대해 잘 설명하지 못할 경우:</strong> &ldquo;페이징에서는 페이지 테이블이 어떻게 동작하나요?&rdquo; &ldquo;페이지 교체 알고리즘 중 하나인 LRU(Least Recently Used) 알고리즘을 설명해주시겠어요?&rdquo;</p>
+<p><strong>후보자가 세그먼테이션에 대해 잘 설명하지 못할 경우:</strong> &ldquo;외부 단편화와 내부 단편화의 차이점은 무엇인가요? 둘 다 세그먼테이션과 어떻게 관련이 있나요?&rdquo;</p>
+<p>Kobayashi</p>
+<h3 id="기본-질문-1">기본 질문:</h3>
+<p><strong>질문:</strong> &ldquo;프로세스와 스레드의 차이점은 무엇인가요? 각 개념의 차이점을 설명하고, 일반적인 운영 체제에서 프로세스 간 통신 방식에 대해 설명해 주세요.&rdquo;</p>
+<h3 id="후보자가-명확히-답변하지-못할-경우의-피드백과-추가-질문-1">후보자가 명확히 답변하지 못할 경우의 피드백과 추가 질문:</h3>
+<h4 id="피드백-1">피드백:</h4>
+<p>&ldquo;프로세스와 스레드는 운영 체제에서 중요한 기본 개념입니다. 간단히 말해, 프로세스는 실행 중인 프로그램을 의미하며 스레드는 프로세스 내에서 실행되는 작업 단위입니다. 이 개념부터 더 명확하게 이해해 봅시다.&rdquo;</p>
+<h4 id="추가-질문-1">추가 질문:</h4>
+<p><strong>프로세스</strong></p>
+<ul>
+<li><strong>추가 질문 1:</strong> 프로세스는 독립적으로 실행되는 프로그램을 의미합니다. 프로세스가 생성되는 단계에 대해 설명해 주시겠어요?</li>
+<li><strong>추가 질문 2:</strong> 프로세스의 주요 구성 요소는 무엇인가요? 예를 들어, 코드, 데이터, 스택, 힙 등을 설명해 주세요.</li>
+</ul>
+<p><strong>스레드</strong></p>
+<ul>
+<li><strong>추가 질문 1:</strong> 스레드는 프로세스 내에서 실행되는 작업 단위입니다. 이는 무엇을 의미하며, 스레드 간의 자원 공유는 어떻게 이루어지나요?</li>
+<li><strong>추가 질문 2:</strong> 멀티스레딩의 주요 장점과 단점은 무엇인가요? 예를 들어, 성능 관련 이점과 컨텍스트 스위치 관련 오버헤드에 대해 이야기해 보세요.</li>
+</ul>
+<p><strong>프로세스 간 통신 (IPC)</strong></p>
+<ul>
+<li><strong>추가 질문 1:</strong> 프로세스 간 통신(IPC)에서 사용할 수 있는 방식 중 하나를 설명해 주시겠어요? 예를 들어, 파이프, 메시지 큐, 공유 메모리 등을 설명해 주세요.</li>
+<li><strong>추가 질문 2:</strong> 소켓을 사용한 프로세스 간 통신은 어떤 상황에서 유리한가요? 구체적인 예를 들어 설명해 주세요.</li>
+</ul>
+<h3 id="예시-답변-1">예시 답변:</h3>
+<p><strong>기본 질문 예시 답변:</strong> &ldquo;프로세스는 실행 중인 프로그램을 의미하며, 독립적인 자원을 가지고 있습니다. 반면 스레드는 프로세스 내에서 실행되는 작업 단위로, 같은 프로세스 내에서 자원을 공유합니다. 일반적인 운영 체제에서는 프로세스 간 통신 방식을 통해 서로 데이터를 교환합니다. 예를 들어, 파이프(pipe)를 사용하면 하나의 프로세스에서 다른 프로세스로 데이터를 전달할 수 있습니다.&rdquo;</p>
+<p><strong>후보자가 프로세스에 대해 잘 설명하지 못할 경우:</strong> &ldquo;프로세스는 운영 체제에서 어떻게 생성되고 관리되나요?&rdquo; &ldquo;프로세스의 주요 구성 요소에는 무엇이 있고, 각 구성 요소의 역할을 설명해 주시겠어요?&rdquo;</p>
+<p><strong>후보자가 스레드에 대해 잘 설명하지 못할 경우:</strong> &ldquo;스레드 간의 자원 공유는 프로세스와 어떻게 다른가요?&rdquo; &ldquo;멀티스레딩의 장점과 단점에 대해 설명해 주시겠어요?&rdquo;</p>
+<p><strong>후보자가 프로세스 간 통신에 대해 잘 설명하지 못할 경우:</strong> &ldquo;파이프는 어떻게 동작하며, 그 사용 예를 들어 설명해 주시겠어요?&rdquo; &ldquo;소켓을 통한 통신이 왜 유리할까요? 구체적인 상황을 예로 들어 설명해 주세요.&rdquo;</p>
+<p>User</p>
+<p>그럼 이제 인터뷰를 시작하자. 먼저 주니어 데브옵스 인터뷰를 위한 간단하고 근본적인 CS 주제 7가지를 제시해 줘. 현업 기술보다는 학교 수업에서 배울 만한 컴퓨터 사이언스 주제를 제시해 줘.</p>
+<p>Kobayashi</p>
+<p>알겠습니다. 주니어 데브옵스 엔지니어를 대상으로 한 인터뷰에서 다룰 수 있는, 학교 수업에서 배울 만한 간단하고 근본적인 컴퓨터 과학 주제 7가지를 제시하겠습니다.</p>
+<h3 id="1-자료구조">1. 자료구조</h3>
+<p><strong>질문:</strong> 배열과 링크드 리스트의 차이점은 무엇인가요? 각 자료구조의 장단점을 설명해 주세요.</p>
+<h3 id="2-알고리즘">2. 알고리즘</h3>
+<p><strong>질문:</strong> 버블 정렬과 퀵 정렬의 차이점은 무엇인가요? 각 알고리즘의 시간 복잡도는 어떻게 되나요?</p>
+<h3 id="3-운영-체제">3. 운영 체제</h3>
+<p><strong>질문:</strong> 운영 체제에서 스케줄링 알고리즘이란 무엇인가요? 라운드 로빈(Round Robin) 스케줄링에 대해 설명해 주세요.</p>
+<h3 id="4-네트워크">4. 네트워크</h3>
+<p><strong>질문:</strong> TCP/IP 모델을 설명해 주세요. 각 계층의 역할은 무엇인가요?</p>
+<h3 id="5-컴퓨터-아키텍처">5. 컴퓨터 아키텍처</h3>
+<p><strong>질문:</strong> 캐시 메모리가 무엇인지 설명해 주시겠어요? 캐시 메모리는 CPU 성능에 어떻게 기여하나요?</p>
+<h3 id="6-데이터베이스">6. 데이터베이스</h3>
+<p><strong>질문:</strong> 데이터베이스의 정규화란 무엇인가요? 정규화를 통해 얻을 수 있는 이점을 설명해 주세요.</p>
+<h3 id="7-컴파일러">7. 컴파일러</h3>
+<p><strong>질문:</strong> 컴파일러와 인터프리터의 차이점은 무엇인가요? 컴파일 과정에서 어떤 단계들이 포함되는지 설명해 주세요.</p>
+<p>이 주제들은 주니어 엔지니어가 컴퓨터 과학 기본 개념을 잘 이해하고 있는지 평가하는 데 도움이 됩니다. 각 질문에 대해 더 깊이 있는 이해를 확인할 수 있도록 추가 질문을 준비해두면 좋습니다.</p>
+<p>User</p>
+<p>이제 1번째 주제로 맨 처음에 주어진 양식을 기반으로 인터뷰를 진행하자. 우선 나에게 질문 하나를 해 줘. 내가 제대로 질문에 답변하냐 못 하냐에 따라 다르게 응답하면 돼. 내가 추가 질문까지 제대로 답하거나, 피드백에도 기본 질문에 답하지 못하면, 다음 주제로 넘어가면 돼. 7개의 질문을 마치면 인터뷰를 종료해.</p>
+<p>Kobayashi</p>
+<p>좋습니다. 첫 번째 주제인 <strong>자료구조</strong>로 시작하겠습니다. 그럼 인터뷰를 시작하겠습니다.</p>
+<h3 id="기본-질문-2">기본 질문:</h3>
+<p><strong>질문:</strong> &ldquo;배열과 링크드 리스트의 차이점은 무엇인가요? 각 자료구조의 장단점을 설명해 주세요.&rdquo;</p>
+<p>당신의 답변을 기다리겠습니다.</p>
+<p>User</p>
+<p>배열은 메모리에 연속되어 있는 자료형이고, 링크드 리스트는 자료형의 내용과 다음 자료형을 가리키는 포인터로 구성되어 있습니다. 배열은 메모리가 연속되어 있기에 메모리의 캐시 히트에 유리하고, 링크드 리스트는 메모리가 동적으로 할당되기에 메모리를 절약할 수 있습니다.</p>
+<p>Kobayashi</p>
+<p>좋습니다. 배열과 링크드 리스트의 기본적인 차이와 장단점을 잘 설명해 주셨습니다. 다만, 몇 가지 중요한 측면이 조금 더 명확하게 설명되면 좋겠습니다. 다음 추가 질문을 통해 조금 더 깊이 있는 이해를 확인해 보겠습니다.</p>
+<h3 id="추가-질문-2">추가 질문:</h3>
+<p><strong>배열</strong></p>
+<ul>
+<li><strong>추가 질문 1:</strong> &ldquo;배열의 크기를 동적으로 조정할 수 없다는 단점이 있는데, 배열 크기를 동적으로 조정할 수 있는 자료구조에는 무엇이 있나요?&rdquo;</li>
+</ul>
+<p><strong>링크드 리스트</strong></p>
+<ul>
+<li><strong>추가 질문 1:</strong> &ldquo;링크드 리스트의 한 노드에 접근하는 시간 복잡도는 어떻게 되나요? 이유도 설명해 주세요.&rdquo;</li>
+<li><strong>추가 질문 2:</strong> &ldquo;링크드 리스트의 삭제 및 삽입 연산의 장점은 무엇인가요?&rdquo;</li>
+</ul>
+<p>원하는 추가 질문에 답해 주세요.</p>
+<p>User</p>
+<p>배열 크기를 동적으로 조정할 수 있는 자료구조에는 C++의 vector가 있습니다. 이 자료구조는 크기를 동적으로 조정할 수 있는 인터페이스를 제공합니다. 링크드 리스트의 한 노드에 접근하는 시간 복잡도는 평균 O(n)입니다. 임의의 노드에 바로 접근할 수 없고 순차적으로 traverse하면서 노드를 찾아내야 하기 때문입니다. 링크드 리스트의 삭제 및 삽입 연산은 배열과 달리 전체 노드의 메모리 주소를 변경할 필요가 없이 전후의 포인터 주소만 변경해 주면 되어 O(1)이 됩니다. 따라서 삽입 및 삭제가 잦은 자료구조에 유리합니다.</p>
+<p>Kobayashi</p>
+<p>아주 잘 설명해 주셨습니다. 배열과 링크드 리스트의 각 특성에 대해 명확하게 이해하고 계신 것 같습니다. 특히 자료구조의 시간 복잡도와 메모리 관리 방식에 대한 설명이 정확합니다. 그럼 다음 주제로 넘어가도록 하겠습니다.</p>
+<h3 id="2번째-주제-알고리즘">2번째 주제: 알고리즘</h3>
+<p><strong>질문:</strong> &ldquo;버블 정렬과 퀵 정렬의 차이점은 무엇인가요? 각 알고리즘의 시간 복잡도는 어떻게 되나요?&rdquo;</p>
+<p>당신의 답변을 기다리겠습니다.</p>
+<p>User</p>
+<p>버블 정렬은 인접한 자료형의 값을 비교하고 작은 값을 앞으로 당겨오는 과정을 n번 반복합니다. 퀵 정렬은 자료형을 두 파티션으로 나누고, 기준점보다 큰 값과 작은 값으로 나누는 과정을 하위 파티션에서 반복합니다. 버블 정렬은 최대 n번의 비교를 n번 반복하므로 O(n^2), 퀵 정렬은 n + n/2 + n/4 + &hellip; 의 합이므로 O(nlogn)이 됩니다.</p>
+<p>Kobayashi</p>
+<p>좋습니다. 버블 정렬과 퀵 정렬의 기본적인 개념과 시간 복잡도에 대해 잘 설명해 주셨습니다. 몇 가지 추가 질문을 통해 더 깊이 있는 이해를 확인해 보겠습니다.</p>
+<h3 id="추가-질문-3">추가 질문:</h3>
+<p><strong>버블 정렬</strong></p>
+<ul>
+<li><strong>추가 질문 1:</strong> &ldquo;버블 정렬의 최선의 경우 시간 복잡도는 어떻게 되나요? 그 이유를 설명해 주세요.&rdquo;</li>
+</ul>
+<p><strong>퀵 정렬</strong></p>
+<ul>
+<li><strong>추가 질문 1:</strong> &ldquo;퀵 정렬의 최악의 경우 시간 복잡도는 어떻게 되나요? 그 이유를 설명해 주세요.&rdquo;</li>
+<li><strong>추가 질문 2:</strong> &ldquo;퀵 정렬은 pivot 선택에 따라 성능이 달라질 수 있는데, pivot을 선택하는 몇 가지 전략을 설명해 주시겠어요?&rdquo;</li>
+</ul>
+<p>원하는 추가 질문에 답해 주세요.</p>
+<p>User</p>
+<p>버블 정렬은 최선의 경우에도 O(n^2)입니다. 이미 자료구조가 정렬되어 있을 때에도 n번의 traversal을 거치기 때문입니다. 퀵 정렬은 최악의 경우 O(n^2)입니다. 가장 큰 혹은 가장 작은 pivot만을 반복해서 선택할 경우 계속 크기 n, n-1, n-2 &hellip;의 파티션을 가지기 때문입니다. pivot을 임의로 선택하지 않고 k개의 값 중 중앙값을 선택할 수 있습니다. 이 경우 O(n^2)이 될 가능성이 더욱 낮아집니다.</p>
+<p>Kobayashi</p>
+<p>훌륭합니다! 버블 정렬과 퀵 정렬의 최선 및 최악의 경우 시간 복잡도에 대해 정확하게 이해하고 계신 것을 확인할 수 있었습니다. 특히, 퀵 정렬의 pivot 선택 전략에 대한 설명도 잘 해주셨습니다. 그럼 다음 주제로 넘어가겠습니다.</p>
+<h3 id="3번째-주제-운영-체제">3번째 주제: 운영 체제</h3>
+<p><strong>질문:</strong> &ldquo;운영 체제의 주요 역할과 기능은 무엇인가요? 운영 체제가 시스템 성능에 어떻게 영향을 미치는지 설명해 주세요.&rdquo;</p>
+<p>당신의 답변을 기다리겠습니다.</p>
+<p>User</p>
+<p>운영 체제는 크게 3가지 추상화를 제공합니다. 첫 번째로 CPU를 시간적으로 분할하는 추상화, 두 번째로 메모리 영역을 분할하는 공간적 추상화, 그리고 영속적인 파일 시스템을 제공하는 추상화가 존재합니다. 운영 체제가 CPU 자원을 어떻게 배분하느냐에 따라 워크로드의 상대적인 성능이 좌우될 수 있습니다.</p>
+<p>Kobayashi</p>
+<p>좋은 설명입니다. 운영 체제의 주요 역할과 기능에 대해 잘 설명해 주셨습니다. 추가로 몇 가지 질문을 통해 조금 더 깊이 있는 이해를 확인해 보겠습니다.</p>
+<h3 id="추가-질문-4">추가 질문:</h3>
+<p><strong>운영 체제의 역할과 기능</strong></p>
+<ul>
+<li><strong>추가 질문 1:</strong> &ldquo;운영 체제에서 프로세스 스케줄링이 중요한 이유는 무엇인가요?&rdquo;</li>
+<li><strong>추가 질문 2:</strong> &ldquo;운영 체제에서 메모리 관리 기법에는 어떤 것들이 있나요? 각각에 대해 간단히 설명해 주세요.&rdquo;</li>
+</ul>
+<p>원하는 추가 질문에 답해 주세요.</p>
+<p>User</p>
+<p>프로세스 스케줄링을 할 때에는 프로세스의 평균 대기 시간과 최초로 자원이 분배되는 시간, 그리고 전체 워크로드의 실행 시간 등의 메트릭을 감안해야 합니다. 이들을 최적화할 수 있는 자료구조와 알고리즘의 동원이 필요하며, 현대 Linux에서는 RBTree를 워크 큐로 활용하고 있습니다. 메모리 관리 기법에는 페이징과 세그먼테이션 등이 있습니다. 페이징은 물리적인 주소 공간을 프로세스 별로 가상의 주소 공간으로 mapping해주어 어플리케이션 개발자로 하여금 보다 추상화된 메모리 관리를 가능케 합니다. 세그먼테이션에 대해서는 깊이 알지 못하겠습니다.</p>
+<p>Kobayashi</p>
+<p>아주 좋습니다! 프로세스 스케줄링의 중요성과 메모리 관리 기법에 대해 잘 설명해 주셨습니다. 특히 Linux에서 사용하는 스케줄링 기법에 대한 언급과 페이징의 역할을 명확히 이해하고 있는 것이 인상적입니다. 세그먼테이션에 대해 깊이 알지 못한다고 하셨지만, 페이징을 정확히 이해하고 계신 점에서 좋은 스킬셋을 가지고 계신 것 같습니다.</p>
+<p>그럼 다음 주제를 다루도록 하겠습니다.</p>
+<h3 id="4번째-주제-네트워크">4번째 주제: 네트워크</h3>
+<p><strong>질문:</strong> &ldquo;TCP/IP 모델을 설명해 주세요. 각 계층의 역할은 무엇인가요?&rdquo;</p>
+<p>당신의 답변을 기다리겠습니다.</p>
+<p>User</p>
+<p>L1 physical layer에서는 신호의 물리적인 전달을 담당하며 리피터, 허브 등이 있습니다. L2에는 물리적인 신호를 데이터로 처리하며 오류를 검출, 교정(correct)하고, 스위치 등이 있습니다. L3에서는 라우터 등이 있습니다. L4에서는 오류를 검출, 재전송(retransmission)하고 Flow control, 혼잡 제어 등을 처리합니다. L5~L7는 어플리케이션 계층과 관련이 있습니다.</p>
+<p>Kobayashi</p>
+<p>좋습니다. TCP/IP 모델의 각 계층과 기본적인 역할에 대해 잘 설명해 주셨습니다. 몇 가지 추가 질문을 통해 더 깊이 있는 이해를 확인해 보겠습니다.</p>
+<h3 id="추가-질문-5">추가 질문:</h3>
+<p><strong>TCP/IP 모델</strong></p>
+<ul>
+<li><strong>추가 질문 1:</strong> &ldquo;L4(TCP)에서 오류 검출과 재전송이 어떻게 이루어지나요?&rdquo;</li>
+<li><strong>추가 질문 2:</strong> &ldquo;L5~L7(Application 계층)의 대표적인 프로토콜을 하나 설명해 주시겠어요? 예를 들어, HTTP는 무엇인가요?&rdquo;</li>
+</ul>
+<p>원하는 추가 질문에 답해 주세요.</p>
+<p>User</p>
+<p>잘 모르겠습니다.</p>
+<p>Kobayashi</p>
+<p>괜찮습니다. 중요한 게 무엇을 모르고 있는지 파악하고, 그 부분을 채워나가는 것입니다. 도움을 드리기 위해 간단한 설명을 덧붙이겠습니다.</p>
+<h3 id="추가-설명">추가 설명:</h3>
+<p><strong>L4 (Transport Layer, TCP)</strong></p>
+<ol>
+<li><strong>오류 검출과 재전송:</strong> TCP는 오류 검출을 위해 체크섬(Checksum)을 사용하고, 패킷이 손실되었을 때 재전송을 요청하는 ARQ(Automatic Repeat reQuest) 메커니즘을 사용합니다. 수신자는 수신된 각 패킷에 대해 ACK(acknowledgment)를 반환하며, 송신자는 정해진 시간 내에 ACK를 받지 못하면 해당 패킷을 재전송합니다.</li>
+</ol>
+<p><strong>L5~L7 (Application Layer)</strong></p>
+<ol>
+<li><strong>HTTP (HyperText Transfer Protocol):</strong> 웹 브라우저와 웹 서버 간의 데이터 전송을 지원하는 프로토콜입니다. 클라이언트가 서버에 요청(request) 메시지를 보내고, 서버가 이에 대한 응답(response) 메시지를 반환하는 방식으로 동작합니다. HTTP는 HTML 문서뿐만 아니라 이미지, 비디오, JSON 등의 리소스를 전달할 수 있습니다.</li>
+</ol>
+<p>자, 그럼 다음 주제로 넘어가겠습니다.</p>
+<h3 id="5번째-주제-컴퓨터-아키텍처">5번째 주제: 컴퓨터 아키텍처</h3>
+<p><strong>질문:</strong> &ldquo;캐시 메모리가 무엇인지 설명해 주시겠어요? 캐시 메모리는 CPU 성능에 어떻게 기여하나요?&rdquo;</p>
+<p>당신의 답변을 기다리겠습니다.</p>
+<p>User</p>
+<p>CPU가 저장 인터페이스로 삼기 위해 메인 메모리는 접근 시간이 너무 느립니다. 그래서 CPU 내부에 캐시 메모리를 장착하여 접근 시간을 단축시킵니다. 대신 캐시 메모리는 메인 메모리보다 용량이 적기 때문에 적절한 데이터 locality를 갖추어 데이터를 retrieve해 와야 합니다.</p>
+<p>Kobayashi</p>
+<p>잘 설명해 주셨습니다. CPU와 메인 메모리 간의 접근 시간 차이를 해결하기 위해 캐시 메모리가 사용된다는 점, 그리고 데이터의 locality가 중요한 역할을 한다는 점을 정확히 이해할 수 있습니다. 추가로 몇 가지 질문을 통해 더 깊이 있는 이해를 확인해 보겠습니다.</p>
+<h3 id="추가-질문-6">추가 질문:</h3>
+<p><strong>캐시 메모리</strong></p>
+<ul>
+<li><strong>추가 질문 1:</strong> &ldquo;캐시 메모리의 계층 구조에 대해 설명해 주시겠어요? L1, L2, L3 캐시의 차이점과 역할은 무엇인가요?&rdquo;</li>
+<li><strong>추가 질문 2:</strong> &ldquo;캐시 일관성(Cache Coherence) 문제란 무엇이며, 이를 해결하기 위한 방법에는 어떤 것들이 있나요?&rdquo;</li>
+</ul>
+<p>원하는 추가 질문에 답해 주세요.</p>
+<p>User</p>
+<p>L1~L3 캐시는 용량과 접근 속도에 따른 분류이며 구체적인 역할을 잘 모르겠습니다. 캐시 일관성은 CPU가 데이터를 참고함에 있어서 캐시 메모리에 해당 데이터가 존재함을 보장하는 것으로, 이에 실패할 경우 캐시 미스가 발생하고 메인 메모리로부터 접근 시간이 추가로 발생합니다. 이를 해결하기 위해 working set에 있는 데이터가 locality를 가지어 캐시 메모리에 모두 담길 수 있도록 하는 기초적인 원리가 있습니다.</p>
+<p>Kobayashi</p>
+<p>아주 좋습니다. 캐시 메모리의 계층 구조와 캐시 일관성 문제에 대해 간단히 설명해 주셨습니다. 몇 가지 추가 정보를 제공하여 이해를 돕도록 하겠습니다.</p>
+<h3 id="추가-설명-1">추가 설명:</h3>
+<p><strong>캐시 계층 구조 (L1, L2, L3 캐시)</strong></p>
+<ol>
+<li><strong>L1 캐시:</strong> CPU 코어에 가장 가까운 캐시로, 매우 빠르지만 용량은 작습니다. 일반적으로 각각의 CPU 코어에 독립된 L1 캐시가 존재합니다. 명령어 캐시와 데이터 캐시로 나눌 수 있습니다.</li>
+<li><strong>L2 캐시:</strong> L1 캐시보다 크지만 느립니다. 여러 코어가 L2 캐시를 공유할 수 있습니다.</li>
+<li><strong>L3 캐시:</strong> 가장 크고 가장 느린 캐시입니다. 일반적으로 모든 코어가 공유합니다.</li>
+</ol>
+<p><strong>캐시 일관성 (Cache Coherence)</strong></p>
+<ol>
+<li><strong>문제:</strong> 여러 코어가 동일한 메모리 위치를 캐시에 저장할 때, 일관성을 유지해야 합니다. 그렇지 않으면 캐시 미스 및 데이터 불일치가 발생할 수 있습니다.</li>
+<li><strong>해결 방법:</strong> 예를 들어 MESI (Modified, Exclusive, Shared, Invalid) 프로토콜과 같은 캐시 일관성 유지 프로토콜이 있습니다. 이는 캐시 라인의 상태 정보를 사용하여 일관성을 유지합니다.</li>
+</ol>
+<p>이제 다음 주제로 넘어가겠습니다.</p>
+<h3 id="6번째-주제-데이터베이스">6번째 주제: 데이터베이스</h3>
+<p><strong>질문:</strong> &ldquo;데이터베이스의 정규화란 무엇인가요? 정규화를 통해 얻을 수 있는 이점을 설명해 주세요.&rdquo;</p>
+<p>당신의 답변을 기다리겠습니다.</p>
+<p>User</p>
+<p>DB의 정규화에 대한 내용은 까먹었습니다. 다만 정규화를 통해 자주 접근하는 데이터에 대한 처리속도를 높일 수 있습니다. 반면 비정규화는 자주 조회되는 데이터 경로에 대해 정규화를 해체하고 데이터를 복제하여 DB에 저장하는 것으로, 조회 속도를 오히려 끌어올릴 수 있습니다.</p>
+<p>Kobayashi</p>
+<p>정규화와 비정규화의 기본 개념을 일부 이해하고 계신 것 같습니다. 정규화에 대한 좀 더 구체적인 설명을 추가하는 것으로 도움을 드리겠습니다.</p>
+<h3 id="정규화-normalization">정규화 (Normalization)</h3>
+<p><strong>정규화란 무엇인가?</strong></p>
+<ol>
+<li><strong>정의:</strong> 데이터베이스 정규화는 데이터의 중복을 줄이고 데이터 무결성을 유지하기 위해 데이터베이스를 체계적으로 구성하는 프로세스입니다.</li>
+<li><strong>목표:</strong> 데이터를 구조화하여 중복을 제거하고, 삽입, 삭제, 갱신 이상(insert, delete, update anomaly)을 방지하는 것이 목표입니다.</li>
+</ol>
+<p><strong>정규화의 단계:</strong></p>
+<ol>
+<li><strong>1NF (First Normal Form):</strong> 모든 도메인이 원자값(atomic value)을 가져야 합니다. 즉, 각 필드에는 단일 값만 포함되어야 합니다.</li>
+<li><strong>2NF (Second Normal Form):</strong> 1NF를 만족하고, 기본 키가 아닌 모든 속성이 기본 키 전체에 종속되어야 합니다. 즉, 부분적 종속성을 제거합니다.</li>
+<li><strong>3NF (Third Normal Form):</strong> 2NF를 만족하고, 기본 키가 아닌 모든 속성이 서로 기본 키를 통해 직접적으로 종속되어야 합니다. 즉, 이행적 종속성을 제거합니다.</li>
+<li><strong>BCNF (Boyce-Codd Normal Form):</strong> 3NF를 강화한 형태로, 모든 결정자가 후보 키여야 합니다.</li>
+</ol>
+<p><strong>정규화의 이점:</strong></p>
+<ol>
+<li><strong>데이터 중복 최소화:</strong> 스토리지 효율이 향상되고 데이터 무결성이 유지됩니다.</li>
+<li><strong>데이터 무결성 향상:</strong> 데이터의 일관성이 높아지고, 데이터 변경 시 비정규화된 데이터베이스에서 발생할 수 있는 이상 현상을 방지합니다.</li>
+<li><strong>유연성 향상:</strong> 데이터베이스 구조를 재설계하기가 용이합니다.</li>
+</ol>
+<p>이제 마지막 주제로 넘어가겠습니다.</p>
+<h3 id="7번째-주제-컴파일러">7번째 주제: 컴파일러</h3>
+<p><strong>질문:</strong> &ldquo;컴파일러와 인터프리터의 차이점은 무엇인가요? 컴파일 과정에서 어떤 단계들이 포함되는지 설명해 주세요.&rdquo;</p>
+<p>당신의 답변을 기다리겠습니다.</p>
+<p>User</p>
+<p>컴파일러에 관한 내용은 수강하지 않았으나 시스템프로그래밍에서 수강한 내용을 설명해 보겠습니다. 컴파일러는 코드로부터 컴퓨터가 처리할 수 있는 실행 가능한 바이너리를 생성하는 과정이고, 인터프리터는 코드를 직접 라인 별로 실행하는 유연한 장치이니다. 컴파일 과정에는 컴파일, 링킹, 그외 단계들이 존재합니다.</p>
+<p>Kobayashi</p>
+<p>좋습니다. 기본적인 개념을 설명해 주셨습니다. 더 깊이 있는 이해를 돕기 위해 약간의 추가 설명을 제공하겠습니다.</p>
+<h3 id="추가-설명-2">추가 설명:</h3>
+<p><strong>컴파일러와 인터프리터의 차이점</strong></p>
+<ol>
+<li>
+<p><strong>컴파일러 (Compiler):</strong></p>
+<ul>
+<li><strong>정의:</strong> 소스 코드를 한 번에 기계어 또는 중간 코드로 번역하여 실행 가능한 바이너리 파일을 생성합니다.</li>
+<li><strong>예:</strong> C, C++, Java(바이코드)</li>
+<li><strong>장점:</strong> 실행 속도가 빠릅니다. 코드가 한 번에 번역되고 최적화가 이루어집니다.</li>
+<li><strong>단점:</strong> 컴파일 시간과 디버깅 단계가 오래 걸릴 수 있습니다.</li>
+</ul>
+</li>
+<li>
+<p><strong>인터프리터 (Interpreter):</strong></p>
+<ul>
+<li><strong>정의:</strong> 소스 코드를 한 줄씩 읽고, 그 즉시 실행합니다. 별도의 실행 파일을 생성하지 않습니다.</li>
+<li><strong>예:</strong> Python, JavaScript, Ruby</li>
+<li><strong>장점:</strong> 실행 및 디버깅이 즉시 가능합니다. 코드 변경 후 재실행이 빠릅니다.</li>
+<li><strong>단점:</strong> 실행 속도가 느릴 수 있습니다. 각 줄마다 해석이 필요하기 때문입니다.</li>
+</ul>
+</li>
+</ol>
+<p><strong>컴파일 과정</strong></p>
+<ol>
+<li><strong>Lexical Analysis (어휘 분석):</strong> 소스 코드를 토큰으로 분할합니다.</li>
+<li><strong>Syntax Analysis (구문 분석):</strong> 토큰 시퀀스가 문법적으로 올바른지 검사하고, 구문 트리를 생성합니다.</li>
+<li><strong>Semantic Analysis (의미 분석):</strong> 구문 트리에서 의미적으로 유효한지 검사합니다. 타입 체크 등.</li>
+<li><strong>Optimization (최적화):</strong> 생성된 중간 코드를 최적화합니다.</li>
+<li><strong>Code Generation (코드 생성):</strong> 최적화된 중간 코드를 목적 코드로 변환합니다.</li>
+<li><strong>Linking (링킹):</strong> 여러 목적 코드 파일을 결합하여 실행 가능한 바이너리 파일을 생성합니다.</li>
+</ol>
+<p>이로써 주어진 7가지 주제를 모두 다루었습니다. 인터뷰를 종료하도록 하겠습니다. 질문해 주셔서 감사합니다! 추가적인 질문이 있다면 언제든지 알려주세요.</p>
+<p>User</p>
+<p>방금 내가 진행한 인터뷰에서 제대로 이해하지 못한 주제들을 복습할 수 있는 자료를 인터넷에서 찾아서 몇 개 제공해 줘. 혹은 책을 추천해 주어도 좋아.</p>
+<p>Kobayashi</p>
+<p>물론입니다. 주제별로 복습할 수 있는 유용한 자료와 추천 서적을 제공하겠습니다.</p>
+<h3 id="1-네트워크">1. 네트워크</h3>
+<p><strong>주제:</strong> TCP/IP 모델 및 각 계층의 역할 <strong>자료:</strong></p>
+<ul>
+<li><a href="https://www.amazon.com/Computer-Networking-Principles-Protocols-Practice/dp/0982477562">Computer Networking: Principles, Protocols and Practice</a> by Olivier Bonaventure</li>
+<li><a href="https://www.cisco.com/c/en/us/tech/ip/networking-solutions-products.html">Cisco&rsquo;s Introduction to TCP/IP</a></li>
+</ul>
+<h3 id="2-알고리즘-1">2. 알고리즘</h3>
+<p><strong>주제:</strong> 버블 정렬, 퀵 정렬과 시간 복잡도 <strong>자료:</strong></p>
+<ul>
+<li><a href="https://www.geeksforgeeks.org/bubble-sort/">Geeks for Geeks - Bubble Sort</a></li>
+<li><a href="https://www.geeksforgeeks.org/quick-sort/">Geeks for Geeks - Quick Sort</a></li>
+<li><a href="https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844">Introduction to Algorithms</a> by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein</li>
+</ul>
+<h3 id="3-운영-체제-1">3. 운영 체제</h3>
+<p><strong>주제:</strong> 프로세스 스케줄링, 메모리 관리 <strong>자료:</strong></p>
+<ul>
+<li><a href="https://www.geeksforgeeks.org/scheduling-algorithms/">Geeks for Geeks - Process Scheduling</a></li>
+<li><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/">Operating Systems: Three Easy Pieces</a> by Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau</li>
+</ul>
+<h3 id="4-컴퓨터-아키텍처">4. 컴퓨터 아키텍처</h3>
+<p><strong>주제:</strong> 캐시 메모리와 캐시 계층 구조 및 일관성 방법 <strong>자료:</strong></p>
+<ul>
+<li><a href="https://www.amazon.com/Computer-Systems-Programmers-Perspective-3rd/dp/013409266X">Computer Systems: A Programmer&rsquo;s Perspective</a> by Randal E. Bryant and David R. O&rsquo;Hallaron</li>
+<li><a href="https://www.geeksforgeeks.org/cache-memory-in-computer-organization/">Geeks for Geeks - Cache Memory</a></li>
+</ul>
+<h3 id="5-데이터베이스">5. 데이터베이스</h3>
+<p><strong>주제:</strong> 데이터베이스 정규화 <strong>자료:</strong></p>
+<ul>
+<li><a href="https://www.amazon.com/Database-System-Concepts-Abraham-Silberschatz/dp/0078022150">Database System Concepts</a> by Abraham Silberschatz, Henry F. Korth and S. Sudarshan</li>
+<li><a href="https://www.w3schools.in/dbms/database-normalization/">W3Schools - Database Normalization</a></li>
+</ul>
+<h3 id="6-컴파일러">6. 컴파일러</h3>
+<p><strong>주제:</strong> 컴파일러와 인터프리터의 차이 및 컴파일 과정 <strong>자료:</strong></p>
+<ul>
+<li><a href="https://www.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811">Compilers: Principles, Techniques, and Tools</a> by Alfred V. Aho, Monica S. Lam, Ravi Sethi and Jeffrey D. Ullman</li>
+<li><a href="https://www.geeksforgeeks.org/difference-between-compiler-and-interpreter/">Geeks for Geeks - Difference Between Compiler and Interpreter</a></li>
+</ul>
+<h4 id="참고-자료">참고 자료:</h4>
+<ul>
+<li><a href="https://www.geeksforgeeks.org/compiler-design-tutorials/">Geeks for Geeks - Compiler Design</a></li>
+</ul>
+<p>이 자료들을 참고하면 각 주제에 대한 깊이 있는 이해를 도울 수 있을 것입니다. 복습하고 싶다면 각 자료를 한번 살펴보세요. 필요 시 정리된 내용을 지속적으로 공부하면서 이해도를 높이는 것이 좋습니다.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="http://localhost:1313//tags/career/">career</a>&nbsp;
+            
+              <a href="http://localhost:1313//tags/computer-science/">computer-science</a>&nbsp;
+            
+              <a href="http://localhost:1313//tags/gen-ai/">gen-ai</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2024
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://localhost:1313/">Unorthodox Tech Blog</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.126.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="http://localhost:1313/js/main.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="http://localhost:1313/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Unorthodox Tech Blog</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on Unorthodox Tech Blog</description>
+    <title>Career on Unorthodox Tech Blog</title>
+    <link>http://localhost:1313/tags/career/</link>
+    <description>Recent content in Career on Unorthodox Tech Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 May 2024 00:29:52 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/career/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>가상 CS 인터뷰를 위한 프롬프트</title>
       <link>http://localhost:1313/posts/cs-interview-prompt/</link>

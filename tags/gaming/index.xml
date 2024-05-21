@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gaming on Unorthodox Tech Blog</title>
+    <link>http://localhost:1313/tags/gaming/</link>
+    <description>Recent content in Gaming on Unorthodox Tech Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 May 2024 12:19:34 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/gaming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>줄곧 품어온 인디개발의 꿈에 관해</title>
+      <link>http://localhost:1313/posts/indie-dev/</link>
+      <pubDate>Mon, 20 May 2024 12:19:34 +0900</pubDate>
+      <guid>http://localhost:1313/posts/indie-dev/</guid>
+      <description>요약 오랫동안 상상만 해오고, 어설프게 시도하다 어이없이 좌초됐던 인디게임 개발의 꿈이 있다. 취뽀를 하고 나서 시간적, 금전적 여유가 생기고 개발 역량도 생기면 과감히 베팅할 각을 재볼 것이다. 물론 파트타임으로. 선호하는 게임의 모습은 대강 있고, 일종의 시스템과 세계관(!!)까지 일부 구상해 본 적 있으나 실제로는 많은 팀원이 합류하면서 마구마구 뒤집어지게 될 것이다. 그리고 게임을 출시하기까지 여러 가지 난관이 도사리고 있다. 이에 대해 고민해 온 바를 여기 정리한다.&#xA;배경 성장환경 나는 플래시게임 세대다. 플래시365, 주전자닷컴, 쉬프트닷컴 등의 커뮤니티</description>
+    </item>
+  </channel>
+</rss>
